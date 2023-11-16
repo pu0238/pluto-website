@@ -1,0 +1,23 @@
+---
+import * as summary from "../pages/docs/SUMMARY.md";
+import Menu from "../components/Menu.vue";
+export interface Props {
+  currentUrl: string;
+}
+
+const { currentUrl } = Astro.props;
+
+if (!summary) return;
+
+const hrefToReplace = `href="${currentUrl}"`;
+const replaceTo = `${hrefToReplace} class="activeUrl"`;
+const summaryContent = summary
+  .compiledContent()
+  .replace(new RegExp(hrefToReplace, "g"), replaceTo);
+---
+
+<section>
+  <div class="sm:pl-9">
+    <Menu client:only summaryContent={summaryContent} />
+  </div>
+</section>

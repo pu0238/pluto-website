@@ -1,0 +1,104 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  url: string;
+}
+
+const { title, description, url } = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content={title} />
+  <meta property="og:url" content={url} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="/styles/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Lato:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <title>{title}</title>
+
+  <script lang="js">
+    function SmoothScroll(target, speed, smooth) {
+      if (target === document)
+        target =
+          document.scrollingElement ||
+          document.documentElement ||
+          document.body.parentNode ||
+          document.body; // cross browser support for document scrolling
+
+      var moving = false;
+      var pos = target.scrollTop;
+      var frame =
+        target === document.body && document.documentElement
+          ? document.documentElement
+          : target; // safari is the new IE
+
+      target.addEventListener("mousewheel", scrolled, { passive: false });
+      target.addEventListener("DOMMouseScroll", scrolled, { passive: false });
+
+      function scrolled(e) {
+        e.preventDefault(); // disable default scrolling
+
+        var delta = normalizeWheelDelta(e);
+
+        pos += -delta * speed;
+        pos = Math.max(
+          0,
+          Math.min(pos, target.scrollHeight - frame.clientHeight)
+        ); // limit scrolling
+
+        if (!moving) update();
+      }
+
+      function normalizeWheelDelta(e) {
+        if (e.detail) {
+          if (e.wheelDelta)
+            return (
+              (e.wheelDelta / e.detail / 40) * (e.detail > 0 ? 1 : -1)
+            ); // Opera
+          else return -e.detail / 3; // Firefox
+        } else return e.wheelDelta / 120; // IE,Safari,Chrome
+      }
+
+      function update() {
+        moving = true;
+
+        var delta = (pos - target.scrollTop) / smooth;
+
+        target.scrollTop += delta;
+
+        if (Math.abs(delta) > 0.5) requestFrame(update);
+        else moving = false;
+      }
+
+      var requestFrame = (function () {
+        // requestAnimationFrame cross browser
+        return (
+          window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          window.msRequestAnimationFrame ||
+          function (func) {
+            window.setTimeout(func, 1000 / 50);
+          }
+        );
+      })();
+    }
+    (function () {
+      new SmoothScroll(document, 120, 12);
+    })();
+  </script>
+</head>

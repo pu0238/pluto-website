@@ -1,0 +1,41 @@
+---
+import NavBar from "../components/NavBar.vue";
+import Layout from "../layouts/Layout.astro";
+import Minimap from "../components/Minimap.vue";
+import MenuWrapper from "../components/MenuWrapper.astro";
+
+const allDocs = await Astro.glob("../pages/docs/**/*.md");
+
+const searchByDocs = allDocs
+  .filter((doc) => !doc.url?.includes("SUMMARY"))
+  .map((doc) => ({
+    title: doc.frontmatter.title,
+    headings: doc.getHeadings(),
+    url: doc.url,
+  }));
+
+const { frontmatter, url, headings } = Astro.props;
+---
+
+<Layout>
+  <nav class="mx-8 my-0 sm:my-4">
+    <NavBar client:only searchData={searchByDocs} />
+  </nav>
+  <section class="sm:flex">
+    <MenuWrapper currentUrl={url} />
+    <div class="docView sm:p-5 sm:px-20 ">
+      <h1 class="!text-5xl">{frontmatter.title}</h1>
+      <div class="docMargin">
+        <slot />
+      </div>
+      <div class="grid text-center sm:flex sm:justify-between pt-2 sm:pt-10 pb-2 border-b-[1px]">
+        <p>Published at: {frontmatter.pubDate.slice(0, 10)}</p>
+
+        <p>Written by: {frontmatter.author}</p>
+      </div>
+    </div>
+    <div class="pt-10">
+      <Minimap client:only headings={headings} />
+    </div>
+  </section>
+</Layout>

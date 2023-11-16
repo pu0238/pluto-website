@@ -1,5 +1,5 @@
 <template>
-  <div class="grid text-white sm:max-w-[36rem] ml-auto">
+  <div class="grid text-white sm:max-w-[36rem] ml-auto px-5 sm:px-0">
     <a
       class="text-white mt-20 path-container p-2 rounded-lg"
       target="_blank"
@@ -20,7 +20,7 @@
         </code>
       </template>
       <button
-        class="ease-out duration-300 w-fit ml-auto mt-2"
+        class="green-button ease-out duration-300 w-fit ml-auto mt-2"
         @click="getData()"
       >
         Try it
@@ -28,7 +28,6 @@
     </div>
   </div>
 </template>
-
 <script lang="ts">
 export default {
   data() {
