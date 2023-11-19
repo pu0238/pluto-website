@@ -25,7 +25,7 @@
       contenteditable="true"
     />
     <button
-      class="float-right right-7 top-5 absolute"
+      class="right-7 top-5 absolute"
       @click="removeInput"
       v-if="InputEmpty"
     >

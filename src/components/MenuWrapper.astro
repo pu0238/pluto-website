@@ -10,14 +10,14 @@ const { currentUrl } = Astro.props;
 if (!summary) return;
 
 const hrefToReplace = `href="${currentUrl}"`;
-const replaceTo = `${hrefToReplace} class="activeUrl"`;
+const replaceTo = `${hrefToReplace} class="text-greenAccent-500"`;
 const summaryContent = summary
   .compiledContent()
   .replace(new RegExp(hrefToReplace, "g"), replaceTo);
 ---
 
 <section>
-  <div class="sm:pl-9">
+  <div class="sm:pl-1">
     <Menu client:only summaryContent={summaryContent} />
   </div>
 </section>

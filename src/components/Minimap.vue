@@ -1,6 +1,6 @@
 <template>
-  <div class="sticky hidden md:block ">
-    <div class="pr-10 border-l-[1px] h-fit">
+  <div class="sticky hidden md:block">
+    <div class="border-l-[1px] h-fit">
       <div
         class="relative text-sm"
         v-for="heading in headings"
@@ -12,7 +12,7 @@
       >
         <p
           :style="{ marginLeft: `${heading.depth * 10}px` }"
-          class="text-white cursor-pointer"
+          class="text-white cursor-pointer font-lato font-regular text-sm "
           @click="() => goToHeading(heading)"
         >
           {{ heading.text }}

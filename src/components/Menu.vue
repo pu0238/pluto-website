@@ -3,7 +3,7 @@
     <div class="sm:hidden"  
     @click="toggleMenu"
     :class="{
-          'flex justify-center py-2 bg-gradient-to-r from-greenAccent-500 from-10% to-greenAccent-600 to-100% mb-6 cursor-pointer': !isMenuVisible,          
+          'flex justify-center py-2 bg-gradient-to-bl from-greenAccent-600 to-greenAccent-500 mb-6 cursor-pointer': !isMenuVisible,          
         }">
       <button
         class="sm:hidden flex"
@@ -18,7 +18,7 @@
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="sticky z-20"
+          class="z-20"
         >
           <path
             d="M20 20L4 4.00003M20 4L4.00002 20"

@@ -1,26 +1,32 @@
 <template>
   <div class="grid text-white sm:max-w-[36rem] ml-auto px-5 sm:px-0">
     <a
-      class="text-white mt-20 path-container p-2 rounded-lg"
+      class="text-white mt-20 bg-greenAccent-500/10 border border-greenAccent-500 p-2 rounded-lg"
       target="_blank"
       :href="href + 'stats'"
     >
       <div class="flex">
-        <p class="get">GET</p>
-        <p class="my-auto path">/stats</p>
+        <p
+          class="font-lato py-2 px-8 rounded-md font-black bg-greenAccent-500 text-xl text-white"
+        >
+          GET
+        </p>
+        <p class="my-auto font-lato font-medium pl-4 pb-3 rounded-md !text-xl text-white">
+          /stats
+        </p>
       </div>
     </a>
     <div class="grid pt-4">
-      <p class="title">Request URL</p>
+      <p class="font-josefin">Request URL</p>
       <code>{{ href }}stats</code>
       <template v-if="response">
-        <p class="title">Response body</p>
+        <p class="font-josefin">Response body</p>
         <code>
           <pre>{{ response }}</pre>
         </code>
       </template>
       <button
-        class="green-button ease-out duration-300 w-fit ml-auto mt-2"
+        class="font-josefin px-8 py-2.5 rounded-3xl bg-greenAccent-500 text-xl border-0 hover:bg-greenAccent-600 ease-out duration-300 w-fit ml-auto mt-2"
         @click="getData()"
       >
         Try it
