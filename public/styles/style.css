@@ -26,14 +26,26 @@ h1 {
   margin: 0;
   color: var(--white);
 }
-h2 {
+h2, h3, h4, h5, h6 {
   font-family: "Josefin Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 25px !important;
+  font-size: 30px !important;
   margin: 0;
   margin-bottom: 48px;
   color: var(--white);
+}
+h3 {
+  font-size: 25px !important;
+}
+h4 {
+  font-size: 22px !important;
+}
+h5 {
+  font-size: 19px !important;
+}
+h6 {
+  font-size: 18px !important;
 }
 p a {
   font-family: "Josefin Sans", sans-serif;
@@ -44,7 +56,7 @@ p {
   font-family: "Josefin Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 15px;
   margin: 0;
   margin-bottom: 48px;
   color: var(--gray);
