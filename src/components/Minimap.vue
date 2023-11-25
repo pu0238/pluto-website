@@ -11,8 +11,8 @@
         }"
       >
         <p
-          :style="{ marginLeft: `${heading.depth * 10}px` }"
-          class="text-white cursor-pointer font-lato font-regular text-sm hover:text-greenAccent-500 duration-150 ease-in-out"
+        :style="{marginLeft: `${heading.depth}5px` }"
+          class="text-white truncate ml cursor-pointer font-lato font-regular text-sm hover:text-greenAccent-500 duration-150 ease-in-out"
           @click="() => goToHeading(heading)"
         >
           {{ heading.text }}
