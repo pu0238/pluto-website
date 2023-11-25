@@ -22,23 +22,28 @@ h1 {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 35px !important;
   margin: 0;
   color: var(--white);
 }
 h2 {
-  font-family: "Josefin Sans", sans-serif; 
+  font-family: "Josefin Sans", sans-serif;
   font-style: normal;
-  font-weight: 300; 
-  font-size: 28px; 
+  font-weight: 300;
+  font-size: 25px !important;
   margin: 0;
   margin-bottom: 48px;
   color: var(--white);
 }
+p a {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--accent);
+  font-weight: 600;
+}
 p {
-  font-family: "Josefin Sans", sans-serif; 
+  font-family: "Josefin Sans", sans-serif;
   font-style: normal;
-  font-weight: 300; 
+  font-weight: 300;
   font-size: 17px;
   margin: 0;
   margin-bottom: 48px;
@@ -70,7 +75,7 @@ code {
 .font-consolas {
   font-family: "Consolas", sans-serif;
 }
- /* ScrollUi  */
+/* ScrollUi  */
 
 ::-webkit-scrollbar {
   width: 10px;

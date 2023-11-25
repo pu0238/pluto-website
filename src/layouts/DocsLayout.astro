@@ -24,7 +24,7 @@ const { frontmatter, url, headings } = Astro.props;
   <section class="sm:flex">
     <MenuWrapper currentUrl={url} />
     <div class="docView md:p-2 lg:p-5 sm:px-2 md:px-5 lg:px-20 overflow-x-hidden">
-      <h1 class="!text-5xl">{frontmatter.title}</h1>
+      <h1>{frontmatter.title}</h1>
       <div class="docMargin">
         <slot />
       </div>
