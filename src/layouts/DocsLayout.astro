@@ -18,6 +18,7 @@ const { frontmatter, url, headings } = Astro.props;
 ---
 
 <Layout>
+  <div class="container mx-auto">
   <nav class="mx-8 my-0 sm:my-4">
     <NavBar client:only searchData={searchByDocs} />
   </nav>
@@ -37,5 +38,5 @@ const { frontmatter, url, headings } = Astro.props;
     <div class="pt-10 pr-5">
       <Minimap client:only headings={headings} />
     </div>
-  </section>
+  </section></div>
 </Layout>
