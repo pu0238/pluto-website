@@ -21,15 +21,17 @@
         </p>
       </button>
       <a
-        href="https://t5mcf-cqaaa-aaaag-qcjna-cai.raw.icp0.io/"
+        href="https://github.com/pu0238/pluto"
+        target="_blank"
         class="button"
         style="margin-left: 10px; margin-top: 5px"
       >
         <img src="/git.svg" />
       </a>
       <a
-        href="https://github.com/pu0238/pluto"
+        href="https://t5mcf-cqaaa-aaaag-qcjna-cai.raw.icp0.io/"
         class="button"
+        target="_blank"
         style="margin-left: 10px; margin-top: 5px"
       >
         <img src="/globe.svg" />
@@ -37,6 +39,7 @@
       <a
         href="https://discord.gg/HYvVN9HK2s"
         class="button"
+        target="_blank"
         style="margin-left: 10px; margin-top: 5px"
       >
         <img src="/discord.svg" />
