@@ -126,6 +126,8 @@ code {
   border-left: 2px;
   border-color: var(--accent);
   border-style: solid;
+  transition-timing-function: ease-out;
+  transition: 0.5s;
 }
 @media only screen and (max-width: 621px) {
   .menu ul ul li {

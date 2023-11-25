@@ -2,7 +2,7 @@
   <div class="sticky hidden md:block">
     <div class="border-l-[1px] h-fit">
       <div
-        class="relative text-sm"
+        class="relative"
         v-for="heading in headings"
         :key="heading.slug"
         :class="{
