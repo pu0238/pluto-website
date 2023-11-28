@@ -22,24 +22,41 @@ h1 {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 35px !important;
   margin: 0;
   color: var(--white);
 }
-h2 {
-  font-family: "Josefin Sans", sans-serif; 
+h2, h3, h4, h5, h6 {
+  font-family: "Josefin Sans", sans-serif;
   font-style: normal;
-  font-weight: 300; 
-  font-size: 28px; 
+  font-weight: 300;
+  font-size: 30px !important;
   margin: 0;
   margin-bottom: 48px;
   color: var(--white);
 }
+h3 {
+  font-size: 25px !important;
+}
+h4 {
+  font-size: 22px !important;
+}
+h5 {
+  font-size: 19px !important;
+}
+h6 {
+  font-size: 18px !important;
+}
+p a {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--accent);
+  font-weight: 600;
+}
 p {
-  font-family: "Josefin Sans", sans-serif; 
+  font-family: "Josefin Sans", sans-serif;
   font-style: normal;
-  font-weight: 300; 
-  font-size: 17px;
+  font-weight: 300;
+  font-size: 15px;
   margin: 0;
   margin-bottom: 48px;
   color: var(--gray);
@@ -70,7 +87,7 @@ code {
 .font-consolas {
   font-family: "Consolas", sans-serif;
 }
- /* ScrollUi  */
+/* ScrollUi  */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -121,6 +138,8 @@ code {
   border-left: 2px;
   border-color: var(--accent);
   border-style: solid;
+  transition-timing-function: ease-out;
+  transition: 0.5s;
 }
 @media only screen and (max-width: 621px) {
   .menu ul ul li {

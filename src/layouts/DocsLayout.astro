@@ -18,15 +18,15 @@ const { frontmatter, url, headings } = Astro.props;
 ---
 
 <Layout>
-  <div class="container mx-auto">
+  <div class="container  mx-auto">
   <nav class="mx-8 my-0 sm:my-4">
     <NavBar client:only searchData={searchByDocs} />
   </nav>
   <section class="sm:flex">
     <MenuWrapper currentUrl={url} />
-    <div class="docView md:p-2 lg:p-5 sm:px-2 md:px-5 lg:px-20 overflow-x-hidden">
-      <h1 class="!text-5xl">{frontmatter.title}</h1>
-      <div class="docMargin">
+    <div class="docView md:p-2 lg:p-5 sm:px-2 md:px-5 lg:px-20 overflow-x-hidden w-screen">
+      <h1>{frontmatter.title}</h1>
+      <div class="docMargin min-h-screen">
         <slot />
       </div>
       <div class="grid text-center sm:flex sm:justify-between pt-2 sm:pt-10 pb-2 border-b-[1px]">
@@ -35,7 +35,7 @@ const { frontmatter, url, headings } = Astro.props;
         <p>Written by: {frontmatter.author}</p>
       </div>
     </div>
-    <div class="pt-10 pr-5">
+    <div class="pt-10 min-w-[150px] pl-5">
       <Minimap client:only headings={headings} />
     </div>
   </section></div>

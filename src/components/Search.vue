@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-zinc-800 xl:w-2/5 lg:w-3/5 md:w-3/5 sm:w-4/5 w-5/6 max-h-[350px] fixed mx-auto sm:inset-x-0 top-15 z-40 overflow-auto"
+    class="bg-zinc-800 xl:w-2/5 lg:w-3/5 md:w-3/5 sm:w-4/5 w-5/6 max-h-[350px] max-w-[600px] fixed mx-auto sm:inset-x-0 top-15 z-40 overflow-auto"
   >
     <div class="relative">
       <svg
@@ -112,18 +112,18 @@
       </div>
 
       <p
-        class="py-5 text-center"
+        class="py-5 text-center font-josefin"
         v-if="suggestions.length === 0 && searchBy !== ''"
       >
-      No results for  <p class="text-white break-words">"{{ searchBy }}"</p>
+      No results for  <p class="text-white break-words font-josefin">"{{ searchBy }}"</p>
       </p>
-      <p class="py-5 text-center" v-else-if="searchBy === ''">
+      <p class="py-5 text-center font-josefin" v-else-if="searchBy === ''">
         No recent searches
       </p>
     </div>
   </div>
   <div
-    class="z-30 fixed h-screen w-screen -ml-8 -mt-20 bg-black/30 backdrop-blur-sm"
+    class="z-30 fixed h-screen w-screen left-0 top-0 bg-black/30 backdrop-blur-sm"
     @click="$emit('closeSearch')"
   ></div>
 </template>

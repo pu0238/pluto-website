@@ -2,7 +2,7 @@
   <div class="sticky hidden md:block">
     <div class="border-l-[1px] h-fit">
       <div
-        class="relative text-sm"
+        class="relative"
         v-for="heading in headings"
         :key="heading.slug"
         :class="{
@@ -11,8 +11,8 @@
         }"
       >
         <p
-          :style="{ marginLeft: `${heading.depth * 10}px` }"
-          class="text-white cursor-pointer font-lato font-regular text-sm hover:text-greenAccent-500 duration-150 ease-in-out"
+        :style="{marginLeft: `${heading.depth}5px` }"
+          class="text-white truncate ml cursor-pointer font-lato font-regular text-sm hover:text-greenAccent-500 duration-150 ease-in-out"
           @click="() => goToHeading(heading)"
         >
           {{ heading.text }}

@@ -16,7 +16,7 @@
             />
           </svg>
         </div>
-        <p class="font-lato !text-sm border-b p-0.5 border-[#9e9e9e] pl-7 bg-transparent sm:pr-28 pr-10 text-left hidden sm:block hover:border-greenAccent-500">
+        <p class="font-lato !text-sm border-b p-0.5 border-[#9e9e9e] pl-7 bg-transparent sm:pr-28 pr-10 text-left hidden sm:block hover:border-greenAccent-500 ease-out duration-300">
           Search
         </p>
       </button>
