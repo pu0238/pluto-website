@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky hidden md:block">
+  <div class="sticky">
     <div class="border-l-[1px] h-fit">
       <div
         class="relative"

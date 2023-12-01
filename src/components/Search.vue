@@ -64,6 +64,7 @@
           <a
             :href="`${url}#${slug}`"
             v-if="searchBy !== ''"
+            @click="$emit('closeSearch')"
             class="text-white hover:text-black flex text-left w-full py-3 px-2 shadow-sm bg-zinc-700/25 hover:bg-greenAccent-500 shadow-zinc-900 rounded text-sm relative group/item"
           >
             <div class="pt-0.5 pr-1">
