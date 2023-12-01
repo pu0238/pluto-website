@@ -1,5 +1,5 @@
-- [INTRODUCTION](/docs/introduction/1)
-- [OVERVIEW](/docs/introduction/2)
+- [INTRODUCTION](/docs)
+- [OVERVIEW](/docs/overview)
   - [First Steps](/docs/introduction/3)
   - [Controllers]()
   - [Providers]()
