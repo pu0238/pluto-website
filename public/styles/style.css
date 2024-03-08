@@ -27,7 +27,11 @@ h1 {
   padding-left: 5px;
   color: var(--white);
 }
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Josefin Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -63,6 +67,19 @@ p {
   margin-bottom: 48px;
   color: var(--gray);
 }
+ul li {
+  font-family: "Lato", sans-serif !important;
+  color: var(--white);
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  margin-left: 30px;
+  
+}
+ul li::marker {
+  content: "•";
+}
+
 pre {
   padding: 6px;
   line-height: 2;
@@ -109,12 +126,17 @@ code {
 
 /* Menu from .md */
 
-.menu ul {
+.menu ul li {
   color: var(--white);
   font-family: "Josefin Sans", sans-serif !important;
   font-style: normal;
   font-weight: 700 !important;
-  font-size: 17px !important;
+  font-size: 14px !important;
+  min-width: 200px;
+  margin-left: 0px;
+}
+.menu ul li::marker {
+  content: "";
 }
 .menu ul ul {
   color: var(--gray);
@@ -131,6 +153,12 @@ code {
   }
 }
 .menu ul ul li {
+  color: var(--gray);
+  font-family: "Lato", sans-serif !important;
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+
   border-left: 2px;
   border-style: solid;
   padding-left: 8px;
@@ -178,5 +206,5 @@ code {
   margin-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 10px 
+  margin: 10px;
 }

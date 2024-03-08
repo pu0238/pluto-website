@@ -44,7 +44,7 @@
     </div>
 
     <div
-      class="menu sticky pl-5 sm:pl-1 sm:h-full h-screen text-center sm:text-left z-20"
+      class="menu sticky pl-5 sm:pl-1 sm:h-full h-screen sm:text-left z-20"
       :class="{
         hidden: !isMenuVisible,
         block: isMenuVisible,
