@@ -1,14 +1,8 @@
 - [INTRODUCTION](/docs)
 - [OVERVIEW](/docs/overview)
 - [GETTING STARTED](/docs/getting-started)
-  - [Tools and Requirements](/docs/getting-started/1)
-  - [Running the Examples](/docs/getting-started/2)
+  - [Running the Examples](/docs/getting-started/runing-examples.md)
 - [BUILDING REST APIS](/docs/rest-apis/)
   - [Project Setup](/docs/rest-apis/1)
   - [Body Validation](/docs/rest-apis/2)
   - [CORS support](/docs/rest-apis/3)
-- [TEMPLATING ENGINE](/docs/templating/)
-- [ADVANCED TOPICS](/docs/advanced/)
-  - Controllers
-  - Middleware
-  - Authorization
