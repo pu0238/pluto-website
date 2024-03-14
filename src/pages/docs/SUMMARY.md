@@ -1,8 +1,0 @@
-- [INTRODUCTION](/docs)
-- [OVERVIEW](/docs/overview)
-- [GETTING STARTED](/docs/getting-started)
-  - [Running the Examples](/docs/getting-started/runing-examples.md)
-- [BUILDING REST APIS](/docs/rest-apis/)
-  - [Project Setup](/docs/rest-apis/1)
-  - [Body Validation](/docs/rest-apis/2)
-  - [CORS support](/docs/rest-apis/3)

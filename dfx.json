@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "pluto_website_backend": {
+      "candid": "src/pluto_website_backend/pluto_website_backend.did",
+      "package": "pluto_website_backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
