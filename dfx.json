@@ -3,7 +3,10 @@
     "pluto_website_backend": {
       "candid": "src/pluto_website_backend/pluto_website_backend.did",
       "package": "pluto_website_backend",
-      "type": "rust"
+      "type": "custom",
+      "wasm": "target/wasm32-unknown-unknown/release/pluto_website_backend.wasm",
+      "build": "./build.sh pluto_website_backend",
+      "optimize": "cycles"
     }
   },
   "defaults": {

@@ -23,3 +23,6 @@ dist/
 
 # environment variables
 .env
+
+src/pluto_website_backend/static
+src/pluto_website_backend/views

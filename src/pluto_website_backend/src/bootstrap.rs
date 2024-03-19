@@ -7,19 +7,27 @@ use pluto::{
 use std::{cell::RefCell, collections::HashMap};
 
 use crate::controller;
-
 thread_local! {
-    static ROUTER: RefCell<Router>  = RefCell::new(controller::setup());
+    static ROUTER: RefCell<Router>  = RefCell::new(build_router());
 }
+
+fn build_router() -> Router {
+    // Initialize the controller actions
+    let mut instance = crate::compiled::router::setup();
+    // Inject static files from the 'static' folder
+    pluto::use_static_files!(instance);
+    controller::backend(&mut instance);
+
+    instance
+}
+
 
 // System functions
 #[post_upgrade]
 fn post_upgrade() {
     ROUTER.with(|r| {
         // Initialize the controller actions
-        let mut instance = controller::setup();
-        // Inject static files from the 'static' folder
-        pluto::use_static_files!(instance);
+        let instance = build_router();
         // Save the changes
         *r.borrow_mut() = instance;
     })

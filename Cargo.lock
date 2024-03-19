@@ -347,7 +347,6 @@ checksum = "de3145af08024dea9fa9914f381a17b8fc6034dfb00f3a84013f7ff43f29ed4c"
 [[package]]
 name = "pluto"
 version = "0.2.1"
-source = "git+https://github.com/pu0238/pluto.git#9ece9d7f1bc5a47789e24440e3502bc24aba6e01"
 dependencies = [
  "candid",
  "dyn-clone",
@@ -360,7 +359,6 @@ dependencies = [
 [[package]]
 name = "pluto_templating"
 version = "0.1.0"
-source = "git+https://github.com/pu0238/pluto.git#9ece9d7f1bc5a47789e24440e3502bc24aba6e01"
 dependencies = [
  "ructe",
 ]
@@ -374,6 +372,7 @@ dependencies = [
  "mime",
  "pluto",
  "pluto_templating",
+ "serde_json",
 ]
 
 [[package]]

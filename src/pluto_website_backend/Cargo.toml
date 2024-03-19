@@ -13,8 +13,9 @@ crate-type = ["cdylib"]
 [dependencies]
 candid = "0.10"
 ic-cdk = "0.13.1"
-pluto = { git = "https://github.com/pu0238/pluto.git" }
+pluto = { path = "../../../pluto/plutonium/src/pluto" }
 mime = "0.3.17"
+serde_json = "1.0.108"
 
 [build-dependencies]
-pluto_templating = { git = "https://github.com/pu0238/pluto.git" }
+pluto_templating = { path = "../../../pluto/plutonium/src/pluto_templating" }
