@@ -21,7 +21,6 @@ fn build_router() -> Router {
     instance
 }
 
-
 // System functions
 #[post_upgrade]
 fn post_upgrade() {

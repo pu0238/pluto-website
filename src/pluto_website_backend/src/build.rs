@@ -137,7 +137,6 @@ pub fn main() -> Result<(), RucteError> {
     let mut out_path = out_path.to_path_buf();
     out_path.push("out");
 
-
     let mut created_file = File::create(out_path.with_file_name("router.rs"))?;
 
     let deps = "pub mod router {\n
