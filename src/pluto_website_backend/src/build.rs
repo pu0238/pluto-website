@@ -1,6 +1,6 @@
 use pluto_templating::RucteError;
 use std::{
-    fs::{copy, create_dir, create_dir_all, read_dir, remove_dir_all, DirEntry, File},
+    fs::{copy, create_dir_all, read_dir, remove_dir_all, DirEntry, File},
     io::{Read, Write},
     path::Path,
 };
