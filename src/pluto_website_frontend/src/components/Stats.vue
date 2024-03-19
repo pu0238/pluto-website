@@ -11,7 +11,7 @@
         >
           GET
         </p>
-        <p class="my-auto font-lato font-medium pl-4 pb-3 rounded-md !text-xl text-white">
+        <p class="my-auto font-lato font-medium pl-4 rounded-md !text-xl text-white">
           /stats
         </p>
       </div>
@@ -58,3 +58,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  code {
+    margin: 4px 0;
+    background: #27272a;
+    padding: 12px;
+    border-radius: 8px;
+  }
+</style>
