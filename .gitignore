@@ -26,3 +26,5 @@ dist/
 
 src/pluto_website_backend/static
 src/pluto_website_backend/views
+src/pluto_website_backend/static/**
+src/pluto_website_backend/views/**
