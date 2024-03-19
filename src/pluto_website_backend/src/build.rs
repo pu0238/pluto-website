@@ -1,6 +1,6 @@
 use pluto_templating::RucteError;
 use std::{
-    fs::{copy, create_dir_all, read_dir, remove_dir_all, DirEntry, File},
+    fs::{copy, create_dir_all, read_dir, DirEntry, File},
     io::{Read, Write},
     path::Path,
 };
@@ -83,9 +83,6 @@ pub fn main() -> Result<(), RucteError> {
     let views_dir = "views/";
     let static_dir = "static/";
     let astro_out_dir = "../pluto_website_frontend/dist/";
-
-    remove_dir_all(views_dir)?;
-    remove_dir_all(static_dir)?;
 
     let astro_out_path = Path::new(astro_out_dir);
     visit_dirs(astro_out_path, &|entry: &DirEntry| {
